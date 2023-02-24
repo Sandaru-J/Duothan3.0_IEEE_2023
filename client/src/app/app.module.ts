@@ -17,9 +17,11 @@ import { FooterComponent } from './footer/footer.component';
 import { MedicineComponent } from './medicine/medicine.component';
 import { InventoryComponent } from './inventory/inventory.component';
 import { ManageProfileComponent } from './manage-profile/manage-profile.component';
+import { PhamarcyCrdComponent } from './Phamarcy/phamarcy-crd/phamarcy-crd.component';
+import { PhamarcyViewComponent } from './Phamarcy/phamarcy-view/phamarcy-view.component';
 
 @NgModule({
-  declarations: [AppComponent, PayhereComponent, AuthComponent, HomeComponent, HeaderComponent, FooterComponent, MedicineComponent, ManageProfileComponent,InventoryComponent, DashboardComponent],
+  declarations: [AppComponent, PayhereComponent, AuthComponent, HomeComponent, HeaderComponent, FooterComponent, MedicineComponent, ManageProfileComponent,InventoryComponent, DashboardComponent, PhamarcyCrdComponent, PhamarcyViewComponent],
 
   imports: [
     BrowserModule,
