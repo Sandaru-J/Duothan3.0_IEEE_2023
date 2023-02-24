@@ -9,6 +9,7 @@ import connect from './db/connect.js';
 
 import paymentRoutes from './routes/paymentRoutes.js';
 import authRoutes from './routes/authRoutes.js';
+import medicineRoutes from './routes/medicineRoutes.js';
 
 const app = express();
 dotenv.config();
@@ -34,6 +35,7 @@ app.get('/api', (req, res) => {
 
 app.use('/api/payment', paymentRoutes);
 app.use('/api/auth', authRoutes);
+app.use('/api/medicine', medicineRoutes);
 
 //Email
 
