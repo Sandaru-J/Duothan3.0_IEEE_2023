@@ -14,9 +14,10 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { MedicineComponent } from './medicine/medicine.component';
 import { InventoryComponent } from './inventory/inventory.component';
+import { ManageProfileComponent } from './manage-profile/manage-profile.component';
 
 @NgModule({
-  declarations: [AppComponent, PayhereComponent, AuthComponent, HomeComponent, HeaderComponent, FooterComponent, MedicineComponent, InventoryComponent],
+  declarations: [AppComponent, PayhereComponent, AuthComponent, HomeComponent, HeaderComponent, FooterComponent, MedicineComponent, ManageProfileComponent,InventoryComponent],
   imports: [
     BrowserModule,
     NgbModule,
