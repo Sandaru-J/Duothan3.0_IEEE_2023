@@ -25,7 +25,7 @@
   padding: 0 30px;
 }
 .navbar{
-  //background: linear-gradient(to right top,#02051e, #012e3c,#028bb5);
+  background: linear-gradient(to right top,#02051e, #012e3c,#028bb5);
   //background: linear-gradient(to right top,#4a025e, #5f089d,#811bee);
   position: fixed;
   width: 100%;
@@ -68,8 +68,8 @@
   color: #007bff;
 }
 .banner{
-  background: url("https://images.pexels.com/photos/1287142/pexels-photo-1287142.jpeg?auto=compress&cs=tinysrgb&w=1600") no-repeat;
-  height: 100vh;
+   //background: url("https://images.pexels.com/photos/1287142/pexels-photo-1287142.jpeg?auto=compress&cs=tinysrgb&w=1600") no-repeat;
+  // height: 100vh;
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
