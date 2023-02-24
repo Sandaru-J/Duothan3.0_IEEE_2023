@@ -7,9 +7,12 @@
 >
   <fa-icon class="d-flex justify-content-end fs-5" role="button"></fa-icon>
   <div class="py-2 px-4">
-    <h5>Add Product</h5>
-    <div class="alert alert-danger p-2 mt-3" role="alert">fgfdg</div>
-    <div class="text-center mt-4">
+    <h5 *ngIf="!editMode">Add Medicine</h5>
+    <h5 *ngIf="editMode">Update Medicine</h5>
+    <div class="alert alert-danger p-2 mt-3" role="alert" *ngIf="false">
+      fgfdg
+    </div>
+    <div class="text-center mt-4" *ngIf="false">
       <div
         class="spinner-border"
         role="status"

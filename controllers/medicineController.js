@@ -14,6 +14,7 @@ const createMedicine = async (req, res) => {
       !manufacturer
     )
       return res.status(400).json({ message: 'Please fill all the fields' });
+    const expireDateConverted = new Date(expireDate);
     const medicine = new Medicine({
       name,
       price,
@@ -21,7 +22,7 @@ const createMedicine = async (req, res) => {
       pharmacyId: '63f6447282cfa72aeb467e20',
       ndc,
       supplier,
-      expireDate,
+      expireDate: expireDateConverted,
       manufacturer,
     });
     await medicine.save();
@@ -30,6 +31,7 @@ const createMedicine = async (req, res) => {
       medicine,
     });
   } catch (error) {
+    console.log(error);
     res.status(500).json({
       message: 'Something went wrong',
       error,
