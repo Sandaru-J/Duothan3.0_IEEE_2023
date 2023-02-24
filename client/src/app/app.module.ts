@@ -1,5 +1,11 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { MatCardModule} from '@angular/material/card';
+import { MatButtonModule } from '@angular/material/button';
+import { MatExpansionModule } from '@angular/material/expansion';
+import { MatFormFieldModule} from '@angular/material/form-field'
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatIconModule } from '@angular/material/icon';
 
 import { AppComponent } from './app.component';
 import { PayhereComponent } from './payhere/payhere.component';
@@ -12,9 +18,10 @@ import { FormsModule } from '@angular/forms';
 import { HomeComponent } from './home/home.component';
 import { HeaderComponent } from './header/header.component';
 import { LandingComponent } from './landing/landing.component';
+import { AddMedicineComponent } from './Phamarcies/add-medicine/add-medicine.component';
 
 @NgModule({
-  declarations: [AppComponent, PayhereComponent, AuthComponent, HomeComponent, HeaderComponent, LandingComponent],
+  declarations: [AppComponent, PayhereComponent, AuthComponent, HomeComponent, HeaderComponent, LandingComponent, AddMedicineComponent],
   imports: [
     BrowserModule,
     NgbModule,
@@ -22,6 +29,11 @@ import { LandingComponent } from './landing/landing.component';
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
+    MatCardModule,
+    MatButtonModule,
+    MatFormFieldModule,
+    //MatDatepickerModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent],
