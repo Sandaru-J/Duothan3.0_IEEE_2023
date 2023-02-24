@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
+import { Router } from '@angular/router';
 import { AddMedicineComponent } from '../add-medicine/add-medicine.component';
 import { Medicine } from '../models/medicine.model';
 
@@ -10,7 +11,7 @@ import { Medicine } from '../models/medicine.model';
 })
 export class MedicineComponent implements OnInit {
   @Input() medicine!: Medicine;
-  constructor(public dialog: MatDialog) {}
+  constructor(public dialog: MatDialog, private router: Router) {}
 
   ngOnInit(): void {}
 
@@ -20,5 +21,9 @@ export class MedicineComponent implements OnInit {
     dialogRef.afterClosed().subscribe((result) => {
       console.log('The dialog was closed');
     });
+  }
+
+  editClicked() {
+    this.router.navigate(['/manage-medicine', this.medicine._id]);
   }
 }
