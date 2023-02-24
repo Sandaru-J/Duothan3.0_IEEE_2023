@@ -13,9 +13,10 @@ import { HomeComponent } from './home/home.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { MedicineComponent } from './medicine/medicine.component';
+import { ManageProfileComponent } from './manage-profile/manage-profile.component';
 
 @NgModule({
-  declarations: [AppComponent, PayhereComponent, AuthComponent, HomeComponent, HeaderComponent, FooterComponent, MedicineComponent],
+  declarations: [AppComponent, PayhereComponent, AuthComponent, HomeComponent, HeaderComponent, FooterComponent, MedicineComponent, ManageProfileComponent],
   imports: [
     BrowserModule,
     NgbModule,
