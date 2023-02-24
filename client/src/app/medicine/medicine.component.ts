@@ -1,4 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { AddMedicineComponent } from '../add-medicine/add-medicine.component';
 import { Medicine } from '../models/medicine.model';
 
 @Component({
@@ -8,7 +10,15 @@ import { Medicine } from '../models/medicine.model';
 })
 export class MedicineComponent implements OnInit {
   @Input() medicine!: Medicine;
-  constructor() {}
+  constructor(public dialog: MatDialog) {}
 
   ngOnInit(): void {}
+
+  openDialog(): void {
+    const dialogRef = this.dialog.open(AddMedicineComponent, {});
+
+    dialogRef.afterClosed().subscribe((result) => {
+      console.log('The dialog was closed');
+    });
+  }
 }

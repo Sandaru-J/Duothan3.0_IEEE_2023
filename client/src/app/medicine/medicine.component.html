@@ -2,6 +2,10 @@
   <img [src]="" class="img img-responsive" />
   <div class="profile-content">
     <div class="item-name">{{ medicine.name }}</div>
+    <div>Manufacturer</div>
+    <div>Supplier</div>
+    <div>NDC</div>
+    <div>Expire Date</div>
     <div class="item-description">Description:{{ medicine.description }}</div>
     <p>Quantity: 2</p>
     <div class="row">
@@ -9,9 +13,12 @@
         <div class="addcart">
           <p class="item_price">{{ medicine.price }}</p>
           <br />
-          <button class="button-hover-addcart button">
-            <span>Add to Cart &nbsp;</span><i class="fa fa-shopping-cart"></i>
-          </button>
+          <div class="d-flex gap-2">
+            <button class="button-hover-addcart button" (click)="openDialog()">
+              Edit
+            </button>
+            <button class="button-hover-addcart button">Delete</button>
+          </div>
         </div>
       </div>
     </div>

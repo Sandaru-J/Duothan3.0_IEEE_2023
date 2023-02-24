@@ -13,6 +13,22 @@ const MedicineSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
+  ndc: {
+    type: String,
+    required: true,
+  },
+  supplier: {
+    type: String,
+    required: true,
+  },
+  expireDate: {
+    type: Date,
+    required: true,
+  },
+  manufacturer: {
+    type: String,
+    required: true,
+  },
   pharmacyId: {
     type: mongoose.Schema.Types.ObjectId,
     ref: 'Pharmacy',

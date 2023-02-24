@@ -17,17 +17,34 @@ import { FooterComponent } from './footer/footer.component';
 import { MedicineComponent } from './medicine/medicine.component';
 import { InventoryComponent } from './inventory/inventory.component';
 import { ManageProfileComponent } from './manage-profile/manage-profile.component';
+import { AddMedicineComponent } from './add-medicine/add-medicine.component';
+import { MatDialogModule } from '@angular/material/dialog';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
-  declarations: [AppComponent, PayhereComponent, AuthComponent, HomeComponent, HeaderComponent, FooterComponent, MedicineComponent, ManageProfileComponent,InventoryComponent, DashboardComponent],
+  declarations: [
+    AppComponent,
+    PayhereComponent,
+    AuthComponent,
+    HomeComponent,
+    HeaderComponent,
+    FooterComponent,
+    MedicineComponent,
+    ManageProfileComponent,
+    InventoryComponent,
+    DashboardComponent,
+    AddMedicineComponent,
+  ],
 
   imports: [
     BrowserModule,
     NgbModule,
     FontAwesomeModule,
     AppRoutingModule,
+    BrowserAnimationsModule,
     FormsModule,
     HttpClientModule,
+    MatDialogModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
