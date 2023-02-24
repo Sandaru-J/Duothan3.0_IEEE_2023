@@ -1,11 +1,12 @@
 
+<app-header></app-header>
+<div class="d-flex gap-2 container flex-wrap">
 
-<!-- <div class="d-flex gap-2">
   <app-medicine
+    (onDeleteClicked)="deleteClicked($event)"
     *ngFor="let medicine of medicines"
     [medicine]="medicine"
   ></app-medicine>
-</div> -->
 
 <div class="input-group mb-3" id="search">
   <span class="input-group-text" id="name">Search</span>

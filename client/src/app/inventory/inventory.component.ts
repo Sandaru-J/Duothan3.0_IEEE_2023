@@ -21,4 +21,15 @@ export class InventoryComponent implements OnInit {
         this.medicines = res.medicines;
       });
   }
+
+  deleteClicked(id: string) {
+    console.log('dd', id);
+
+    this.http
+      .delete(environment.API_URL + '/medicine/' + id)
+      .subscribe((res) => {
+        console.log(res);
+        this.medicines = this.medicines.filter((m) => m._id !== id);
+      });
+  }
 }
