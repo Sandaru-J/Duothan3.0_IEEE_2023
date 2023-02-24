@@ -13,10 +13,14 @@ import { FormsModule } from '@angular/forms';
 import { HomeComponent } from './home/home.component';
 import { HeaderComponent } from './header/header.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
-
+import { FooterComponent } from './footer/footer.component';
+import { MedicineComponent } from './medicine/medicine.component';
+import { InventoryComponent } from './inventory/inventory.component';
+import { ManageProfileComponent } from './manage-profile/manage-profile.component';
 
 @NgModule({
-  declarations: [AppComponent, PayhereComponent, AuthComponent, HomeComponent, HeaderComponent, DashboardComponent],
+  declarations: [AppComponent, PayhereComponent, AuthComponent, HomeComponent, HeaderComponent, FooterComponent, MedicineComponent, ManageProfileComponent,InventoryComponent, DashboardComponent],
+
   imports: [
     BrowserModule,
     NgbModule,
