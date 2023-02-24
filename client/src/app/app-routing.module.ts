@@ -5,6 +5,7 @@ import { HomeComponent } from './home/home.component';
 import { InventoryComponent } from './inventory/inventory.component';
 import { ManageProfileComponent } from './manage-profile/manage-profile.component';
 import { AddMedicineComponent } from './add-medicine/add-medicine.component';
+import { PhamarcyViewComponent } from './Phamarcy/phamarcy-view/phamarcy-view.component';
 
 const routes: Routes = [
   {
@@ -34,6 +35,10 @@ const routes: Routes = [
   {
     path: 'manage-medicine/:id',
     component: AddMedicineComponent,
+  },
+  {
+    path: 'pharmacy',
+    component: PhamarcyViewComponent,
   },
 ];
 

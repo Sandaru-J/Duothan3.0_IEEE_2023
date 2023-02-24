@@ -1,5 +1,7 @@
-<div class="d-flex gap-2">
+<app-header></app-header>
+<div class="d-flex gap-2 flex-wrap">
   <app-phamarcy-crd
     *ngFor="let phamarcy of phamarcies"
     [phamarcy]="phamarcy"
-></app-phamarcy-crd>
+  ></app-phamarcy-crd>
+</div>
