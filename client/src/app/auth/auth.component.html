@@ -1,23 +1,10 @@
 <h3 class="m-4 fw-bold" [routerLink]="['/']" role="button">Duothan 3.0 IEEE</h3>
 
 <div class="container mx-auto text-center">
-  <h3 class="fw-bold">Hello {{ isPharmacy ? "Pharmacist!" : "User!" }}</h3>
+  <h3 class="fw-bold">Hello Pharmacist</h3>
 
   <p class="fw-semibold" *ngIf="!loginPage">
     Create an account or <a [routerLink]="['/login']">login</a> to the system<br />
-
-    <!-- <button *ngIf="isPharmacy && loginPage" (click)="onSwitch()">
-      Login as a User
-    </button>
-    <button *ngIf="!isPharmacy && loginPage" (click)="onSwitch()">
-      Login as a Pharmacist
-    </button> -->
-    <button *ngIf="isPharmacy && !loginPage" (click)="onSwitch()">
-      Register as a User
-    </button>
-    <button *ngIf="!isPharmacy && !loginPage" (click)="onSwitch()">
-      Register as a Pharmacist
-    </button>
   </p>
   <p class="fw-semibold" *ngIf="loginPage">
     Login or <a [routerLink]="['/register']">create an account</a> to the system
@@ -42,7 +29,7 @@
     </div>
     <h5>Pharmacy</h5>
     <div class="input-group mb-3" *ngIf="!loginPage">
-      <span class="input-group-text" id="name">Name</span>
+      <span class="input-group-text" id="name">Pharmacy Name</span>
       <input
         type="text"
         id="name"
@@ -53,12 +40,11 @@
       />
     </div>
     <div class="input-group mb-3">
-      <span class="input-group-text" id="address">Address</span>
+      <span class="input-group-text" id="email">Email</span>
       <input
-        id="address"
-        type="address"
-        class="form-control"
-        name="address"
+        id="email"
+        type="email"
+        name="email"
         ngModel
         nic
         required
@@ -88,6 +74,7 @@
         name="email"
         ngModel
         class="form-control"
+
         aria-label="Username"
         aria-describedby="basic-addon1"
         required
@@ -165,13 +152,12 @@
         required
       />
     </div>
-
-    <div class="input-group mb-3" *ngIf="!loginPage">
-      <span class="input-group-text" id="phone_number">Phone Number</span>
+    <div class="input-group mb-3">
+      <span class="input-group-text" id="password">Password</span>
       <input
-        id="phone_number"
-        type="phone_number"
-        name="phone_number"
+        id="password"
+        type="password"
+        name="password"
         ngModel
         class="form-control"
         aria-label="Username"
@@ -180,19 +166,16 @@
         minlength="6"
       />
     </div>
-
-    <div class="input-group mb-3">
-      <span class="input-group-text" id="email">Email</span>
+    <div class="input-group mb-3" *ngIf="!loginPage">
+      <span class="input-group-text" id="address">Address</span>
       <input
-        id="email"
-        type="email"
-        name="email"
-        ngModel
+        id="address"
+        type="address"
         class="form-control"
-        aria-label="Username"
-        aria-describedby="basic-addon1"
+        name="address"
+        ngModel
+        nic
         required
-        minlength="6"
       />
     </div>
 
@@ -215,10 +198,12 @@
 
     <div class="input-group mb-3" *ngIf="!loginPage">
       <span class="input-group-text" id="password">Password</span>
+      <span class="input-group-text" id="phone_number">Contact Number</span>
+
       <input
-        id="password"
-        type="password"
-        name="password"
+        id="phone_number"
+        type="number"
+        name="contactNo"
         ngModel
         class="form-control"
         aria-label="password"
@@ -229,11 +214,19 @@
     </div>
 
     <div class="input-group mb-3" *ngIf="!loginPage">
+
       <span class="input-group-text" id="confirmpassword">Confirm Password</span>
       <input
         id="confirmpassword"
         type="confirmpassword"
         name="confirmpassword"
+
+      <span class="input-group-text" id="license">License Number</span>
+      <input
+        id="license"
+        type="license"
+        name="licenseNo"
+
         ngModel
         class="form-control"
         aria-label="confirmpassword"

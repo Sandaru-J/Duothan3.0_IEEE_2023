@@ -4,4 +4,8 @@ export interface User {
   email: string;
   password: string | null;
   token: string | null;
+  isAdmin: boolean;
+  licenseNo: string;
+  address: string;
+  licenseDocImageUrl: string;
 }

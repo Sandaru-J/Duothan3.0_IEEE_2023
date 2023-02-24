@@ -8,22 +8,66 @@ const UserSchema = new mongoose.Schema(
     name: {
       type: String,
       required: true,
-      minlength: [3, 'Name must be at least 3 characters'],
+    },
+    address: {
+      type: String,
+      required: true,
+    },
+    contactNo: {
+      type: String,
+      required: true,
     },
     email: {
       type: String,
       required: true,
-      unique: [true, 'Email already exists'],
-      validate: {
-        validator: validator.isEmail,
-        message: 'Please provide a valid email',
-      },
     },
     password: {
       type: String,
       required: true,
-      minlength: [6, 'Password must be at least 6 characters'],
-      select: false,
+    },
+    licenseNo: {
+      type: String,
+      required: true,
+    },
+    licenseDocImageUrl: {
+      type: String,
+      required: true,
+      default: 'https://i.imgur.com/9J4ZQZm.png',
+    },
+    isAdmin: {
+      type: Boolean,
+      required: true,
+      default: false,
+    },
+    website: {
+      type: String,
+      required: true,
+    },
+    operatingHours: {
+      type: String,
+      required: true,
+    },
+    owner: {
+      name: {
+        type: String,
+        required: true,
+      },
+      contactNo: {
+        type: String,
+        required: true,
+      },
+      email: {
+        type: String,
+        required: true,
+      },
+      address: {
+        type: String,
+        required: true,
+      },
+      nic: {
+        type: String,
+        required: true,
+      },
     },
   },
   { timestamps: true }
