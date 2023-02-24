@@ -28,6 +28,7 @@ export class AuthComponent implements OnInit {
     if (this.route.snapshot.url[0].path === 'register') {
       this.loginPage = false;
     }
+    console.log(this.loginPage);
   }
 
   onSubmit(form: NgForm) {
