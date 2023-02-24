@@ -1,0 +1,109 @@
+<app-header></app-header>
+
+<!-- <form>
+    <div class="form-group">
+      <label for="exampleInputId">ID</label>
+      <input type="input" class="form-control" id="exampleInputId" aria-describedby="idHelp" placeholder="Enter email">
+      <small id="idHelp" class="form-text text-muted"></small>
+    </div>
+    <div class="form-group">
+      <label for="exampleInputPharmacyName">Pharmacy Name</label>
+      <input type="input" class="form-control" id="exampleInputPharmName" placeholder="Pharmacy Name">
+    </div>
+    <div class="form-group">
+        <label for="exampleInputEmail1">Pharmacy Email</label>
+        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+      </div>
+      <div class="form-group">
+        <label for="exampleInputPharmacyName">Owner Name</label>
+        <input type="input" class="form-control" id="exampleInputOwnerName" placeholder="Owner Name">
+      </div>
+    <div class="form-check">
+      <input type="checkbox" class="form-check-input" id="exampleCheck1">
+      <label class="form-check-label" for="exampleCheck1">Verified</label>
+    </div>
+    <button type="submit" class="btn btn-primary">Edit</button>
+    <button type="submit" class="btn btn-primary">Delete</button>
+  </form> -->
+
+  <form action="" class="text-center container" #form="ngForm">
+    <fa-icon class="d-flex justify-content-end fs-5" role="button"></fa-icon>
+    <div class="py-2 px-4">
+      <h5>Add Pharmacy</h5>
+      <div class="alert alert-danger p-2 mt-3" role="alert">Error</div>
+
+      <div class="text-center mt-4">
+        <div
+          class="spinner-border"
+          role="status"
+          style="width: 3rem; height: 3rem">
+          <span class="visually-hidden">Loading...</span>
+        </div>
+
+      </div>
+
+      <div class="input-group mb-3 mt-4">
+        <span class="input-group-text" id="basic-addon1" style="width:40%">Pharmacy ID</span>
+        <input
+          type="text"
+          name="name"
+          class="form-control"
+          aria-label="Username"
+          ngModel
+          required
+          aria-describedby="basic-addon1"
+        />
+      </div>
+
+      <div class="input-group mb-3">
+        <span class="input-group-text" id="basic-addon1" style="width:40%" required>Pharmacy Name</span>
+        <input
+          type="text"
+          name="quantity"
+          class="form-control"
+          aria-label="Username"
+          ngModel
+          aria-describedby="basic-addon1"
+        />
+      </div>
+  
+      <div class="input-group mb-3">
+        <span class="input-group-text" id="basic-addon1" style="width:40%" required>Pharmacy Email</span>
+        <input
+          type="email"
+          name="email"
+          class="form-control"
+          aria-label="Username"
+          ngModel
+          aria-describedby="basic-addon1"
+        />
+      </div>
+  
+      <div class="input-group mb-3">
+        <span class="input-group-text" id="basic-addon1" style="width:40%" required>Owner Name</span>
+        <input
+          type="text"
+          name="ownerName"
+          class="form-control"
+          aria-label="Username"
+          ngModel
+          aria-describedby="basic-addon1"
+        />
+      </div>
+
+      <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1" style="width:40%" required>Verification Status</span>
+            <select id="verifyOption" name="verifyOption" style="width:60%">
+                <option value="0">Approved</option>
+                <option value="1">Rejected</option>
+            </select>
+        </div>
+        
+        <div class="input-group mb-3">
+                <span class="input-group-text" id="basic-addon1" style="width:40%" required>Action</span>
+                <button type="submit" class="btn" style="width:30%;">Edit</button>
+                <button type="submit" class="btn" style="width:30%;">Delete</button>
+        </div>
+
+      </div> 
+  </form>

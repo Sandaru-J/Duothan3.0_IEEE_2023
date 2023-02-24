@@ -17,9 +17,10 @@ import { FooterComponent } from './footer/footer.component';
 import { MedicineComponent } from './medicine/medicine.component';
 import { InventoryComponent } from './inventory/inventory.component';
 import { ManageProfileComponent } from './manage-profile/manage-profile.component';
+import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
 
 @NgModule({
-  declarations: [AppComponent, PayhereComponent, AuthComponent, HomeComponent, HeaderComponent, FooterComponent, MedicineComponent, ManageProfileComponent,InventoryComponent, DashboardComponent],
+  declarations: [AppComponent, PayhereComponent, AuthComponent, HomeComponent, HeaderComponent, FooterComponent, MedicineComponent, ManageProfileComponent,InventoryComponent, DashboardComponent, AdminDashboardComponent],
 
   imports: [
     BrowserModule,
