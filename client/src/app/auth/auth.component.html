@@ -1,9 +1,23 @@
 <h3 class="m-4 fw-bold" [routerLink]="['/']" role="button">Duothan 3.0 IEEE</h3>
 
 <div class="container mx-auto text-center">
-  <h3 class="fw-bold">Hello</h3>
+  <h3 class="fw-bold">Hello {{ isPharmacy ? "Pharmacist!" : "User!" }}</h3>
+
   <p class="fw-semibold" *ngIf="!loginPage">
-    Create an account or <a [routerLink]="['/login']">login</a> to the system
+    Create an account or <a [routerLink]="['/login']">login</a> to the system<br />
+
+    <!-- <button *ngIf="isPharmacy && loginPage" (click)="onSwitch()">
+      Login as a User
+    </button>
+    <button *ngIf="!isPharmacy && loginPage" (click)="onSwitch()">
+      Login as a Pharmacist
+    </button> -->
+    <button *ngIf="isPharmacy && !loginPage" (click)="onSwitch()">
+      Register as a User
+    </button>
+    <button *ngIf="!isPharmacy && !loginPage" (click)="onSwitch()">
+      Register as a Pharmacist
+    </button>
   </p>
   <p class="fw-semibold" *ngIf="loginPage">
     Login or <a [routerLink]="['/register']">create an account</a> to the system
@@ -38,19 +52,19 @@
       />
     </div>
     <div class="input-group mb-3">
-      <span class="input-group-text" id="email">Email</span>
+      <span class="input-group-text" id="address">Address</span>
       <input
-        id="email"
-        type="email"
+        id="address"
+        type="address"
         class="form-control"
-        name="email"
+        name="address"
         ngModel
-        email
+        nic
         required
       />
     </div>
-    <!-- <div class="input-group mb-3" *ngIf="!loginPage">
-      <span class="input-group-text" id="basic-addon1">Phone No</span>
+    <div class="input-group mb-3" *ngIf="!loginPage && !isPharmacy">
+      <span class="input-group-text" id="dob">Birth Date</span>
       <input
         type="number"
         class="form-control"
@@ -59,7 +73,37 @@
         aria-label="Username"
         aria-describedby="basic-addon1"
       />
-    </div> -->
+    </div>
+
+    <div class="input-group mb-3" *ngIf="!loginPage">
+      <span class="input-group-text" id="phone_number">Phone Number</span>
+      <input
+        id="phone_number"
+        type="phone_number"
+        name="phone_number"
+        ngModel
+        class="form-control"
+        aria-label="Username"
+        aria-describedby="basic-addon1"
+        required
+        minlength="6"
+      />
+    </div>
+
+    <div class="input-group mb-3">
+      <span class="input-group-text" id="email">Email</span>
+      <input
+        id="email"
+        type="email"
+        name="email"
+        ngModel
+        class="form-control"
+        aria-label="Username"
+        aria-describedby="basic-addon1"
+        required
+        minlength="6"
+      />
+    </div>
     <div class="input-group mb-3">
       <span class="input-group-text" id="password">Password</span>
       <input
@@ -74,6 +118,21 @@
         minlength="6"
       />
     </div>
+    <div class="input-group mb-3">
+      <span class="input-group-text" id="license">License Number</span>
+      <input
+        id="license"
+        type="license"
+        name="license"
+        ngModel
+        class="form-control"
+        aria-label="Username"
+        aria-describedby="basic-addon1"
+        required
+        minlength="6"
+      />
+    </div>
+
     <button
       class="btn btn-primary btn-default text-white"
       [disabled]="isLoading"
@@ -82,3 +141,104 @@
     </button>
   </form>
 </div>
+
+<!-- <div
+  class="container"
+  style="background-color: #041221; max-width: none; margin-top: -1%"
+>
+  <div id="flow">
+    <span class="flow-1"></span>
+    <span class="flow-2"></span>
+    <span class="flow-3"></span>
+  </div>
+  <div class="section">
+    <section class="hero is-success is-fullheight">
+      <div class="hero-body">
+        <div class="container has-text-centered" style="max-width: 1132px">
+          <div class="column is-4 is-offset-4">
+            <h3 class="title">Login</h3>
+            <hr class="login-hr" />
+
+            <div class="box">
+              <figure class="avatar">
+                <img src="https://placehold.it/128x128" />
+              </figure>
+
+              <form (submit)="onSubmit(loginForm)" #loginForm="ngForm">
+                <div class="field">
+                  <div class="control">
+                    <input
+                      name="email"
+                      ngModel
+                      #emailInput="ngModel"
+                      class="input is-medium"
+                      type="email"
+                      placeholder="Your Email"
+                      autofocus=""
+                      required
+                      email
+                    />
+                    <p
+                      class="login-error"
+                      *ngIf="!emailInput.valid && emailInput.touched"
+                    >
+                      Please enter valid email
+                    </p>
+                  </div>
+                </div>
+
+                <div class="field">
+                  <div class="control">
+                    <input
+                      name="password"
+                      ngModel
+                      #passwordInput="ngModel"
+                      class="input is-medium"
+                      type="password"
+                      placeholder="Your Password"
+                      required
+                    />
+                    <p
+                      class="login-error"
+                      *ngIf="!passwordInput.valid && passwordInput.touched"
+                    >
+                      Please enter valid password
+                    </p>
+                  </div>
+                </div>
+                <div class="field">
+                  <label class="checkbox">
+                    <input type="checkbox" />
+                    Remember me
+                  </label>
+                </div>
+                <button
+                  class="button is-block is-primary is-medium is-fullwidth"
+                  type="submit"
+                >
+                  Login <i class="fas fas-sign-in" aria-hidden="true"></i>
+                </button>
+              </form>
+            </div>
+            <p class="has-text-grey" style="color: #00d1b2">
+              <a style="color: #00d1b2" routerLink="/signup">Sign Up</a>
+              &nbsp;·&nbsp;
+              <a style="color: #00d1b2" routerLink="/">Forgot Password</a>
+              &nbsp;·&nbsp;
+              <a style="color: #00d1b2" href="../">Need Help?</a>
+            </p>
+            <br /><br /><br />
+            <!-- <p class="subtitle ">Please login to proceed.</p> -->
+<!--<a class="level-item logo-margin">
+              <img
+                src="https://i.ibb.co/L9X6wKM/pharmacare-logo-hori-tagline-2.png"
+                width="152"
+                height="140"
+              />
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</div> -->
