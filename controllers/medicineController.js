@@ -78,7 +78,7 @@ const updateMedicine = async (req, res) => {
     medicine.name = name;
     medicine.description = description;
     medicine.price = price;
-    medicine.stock = stock;
+    medicine.quantity = quantity;
     medicine.ndc = ndc;
     medicine.supplier = supplier;
     medicine.expireDate = expireDate;
@@ -90,6 +90,7 @@ const updateMedicine = async (req, res) => {
       medicine,
     });
   } catch (error) {
+    console.log(error);
     res.status(500).json({
       message: 'Something went wrong',
       error,

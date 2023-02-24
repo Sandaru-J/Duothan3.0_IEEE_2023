@@ -1,8 +1,28 @@
 import User from '../models/User.js';
 
 const register = async (req, res) => {
-  const { name, email, password, address, contactNo, licenseNo } = req.body;
-  if (!name || !email || !password || !address || !contactNo || !licenseNo) {
+  const {
+    name,
+    email,
+    password,
+    address,
+    contactNo,
+    licenseNo,
+    operatingHours,
+    owner,
+    website,
+  } = req.body;
+  if (
+    !name ||
+    !email ||
+    !password ||
+    !address ||
+    !contactNo ||
+    !licenseNo ||
+    !operatingHours ||
+    !owner ||
+    !website
+  ) {
     return res.status(400).json({ message: 'Please enter all fields' });
   }
   try {

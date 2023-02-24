@@ -2,6 +2,12 @@ import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { environment } from 'src/environments/environment';
 import { Medicine } from '../models/medicine.model';
+import {
+  faSearch,
+  faBars,
+  faUser,
+  faShoppingBasket,
+} from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-inventory',
@@ -10,6 +16,7 @@ import { Medicine } from '../models/medicine.model';
 })
 export class InventoryComponent implements OnInit {
   medicines: Medicine[] = [];
+  faSearch = faSearch;
   constructor(private http: HttpClient) {}
 
   ngOnInit(): void {
