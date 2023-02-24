@@ -17,19 +17,38 @@ import { FooterComponent } from './footer/footer.component';
 import { MedicineComponent } from './medicine/medicine.component';
 import { InventoryComponent } from './inventory/inventory.component';
 import { ManageProfileComponent } from './manage-profile/manage-profile.component';
+
+import { AddMedicineComponent } from './add-medicine/add-medicine.component';
+import { MatDialogModule } from '@angular/material/dialog';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PhamarcyCrdComponent } from './Phamarcy/phamarcy-crd/phamarcy-crd.component';
 import { PhamarcyViewComponent } from './Phamarcy/phamarcy-view/phamarcy-view.component';
-
 @NgModule({
-  declarations: [AppComponent, PayhereComponent, AuthComponent, HomeComponent, HeaderComponent, FooterComponent, MedicineComponent, ManageProfileComponent,InventoryComponent, DashboardComponent, PhamarcyCrdComponent, PhamarcyViewComponent],
+  declarations: [
+    AppComponent,
+    PayhereComponent,
+    AuthComponent,
+    HomeComponent,
+    HeaderComponent,
+    FooterComponent,
+    MedicineComponent,
+    ManageProfileComponent,
+    InventoryComponent,
+    DashboardComponent,
+    AddMedicineComponent,
+    PhamarcyCrdComponent,
+    PhamarcyViewComponent
+  ],
 
   imports: [
     BrowserModule,
     NgbModule,
     FontAwesomeModule,
     AppRoutingModule,
+    BrowserAnimationsModule,
     FormsModule,
     HttpClientModule,
+    MatDialogModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

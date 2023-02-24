@@ -39,6 +39,36 @@ const UserSchema = new mongoose.Schema(
       required: true,
       default: false,
     },
+    website: {
+      type: String,
+      required: true,
+    },
+    operatingHours: {
+      type: String,
+      required: true,
+    },
+    owner: {
+      name: {
+        type: String,
+        required: true,
+      },
+      contactNo: {
+        type: String,
+        required: true,
+      },
+      email: {
+        type: String,
+        required: true,
+      },
+      address: {
+        type: String,
+        required: true,
+      },
+      nic: {
+        type: String,
+        required: true,
+      },
+    },
   },
   { timestamps: true }
 );
