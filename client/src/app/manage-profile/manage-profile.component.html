@@ -1,53 +1,60 @@
-<section class="Form my-4 mx-6" id="full">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-6">
-        <img src="https://img.freepik.com/free-vector/mobile-login-concept-illustration_114360-83.jpg?w=2000" class="img-fluid">
+<form action="" class="text-center" #form="ngForm">
+  <!-- <fa-icon
+    [icon]="faClose"
+    class="d-flex justify-content-end fs-5"
+    role="button"
+  ></fa-icon> -->
+  <div class="py-2 px-4">
+    <h5>Add Product</h5>
+    <!-- <div class="alert alert-danger p-2 mt-3" role="alert" *ngIf="errorMessage">
+      {{ errorMessage }}
+    </div> -->
+    <div class="text-center mt-4" *ngIf="false">
+      <div
+        class="spinner-border"
+        role="status"
+        style="width: 3rem; height: 3rem"
+      >
+        <span class="visually-hidden">Loading...</span>
       </div>
-
-
-      <div class="col-md-6" id="right">
-        <i class="fa-solid fa-user-unlock" id="user-login-icon"></i>
-        <h1 class="font-weight-bold">MediSearch</h1>
-        <h3>Manage Profile</h3>
-        <br>
-
-      <form >
-        <div class="form-row">
-          <div class="col-lg-7">
-            <input type="text" placeholder="Name" class="form-control my-3 p-4">
-          </div>
-        </div>
-        <div class="form-row">
-          <div class="col-lg-7">
-            <input type="text" placeholder="Phone Number" class="form-control my-3 p-4">
-          </div>
-        </div>
-        <div class="form-row">
-          <div class="col-lg-7">
-            <input type="text" placeholder="Email" class="form-control my-3 p-4">
-          </div>
-        </div>
-        <div class="form-row">
-          <div class="col-lg-7">
-            <input type="password" placeholder="Password" class="form-control my-3 p-4">
-          </div>
-        </div>
-        <div class="form-row">
-          <div class="col-lg-7">
-            <input type="text" placeholder="License Number" class="form-control my-3 p-4">
-          </div>
-        </div>
-
-        <div class="form-row">
-          <div class="col-lg-7">
-            <button type="button" class="btnsave mt-3 mb-5">Save</button>
-          </div>
-        </div>
-
-      </form>
-
-</div>
     </div>
+    <div class="input-group mb-3 mt-4">
+      <span class="input-group-text" id="basic-addon1">Name</span>
+      <input
+        type="text"
+        name="name"
+        class="form-control"
+        aria-label="Username"
+        ngModel
+        required
+        aria-describedby="basic-addon1"
+      />
+    </div>
+    <div class="input-group mb-3">
+      <span class="input-group-text" id="basic-addon1" required>Price</span>
+      <input
+        type="text"
+        name="price"
+        class="form-control"
+        aria-label="Username"
+        ngModel
+        aria-describedby="basic-addon1"
+      />
+    </div>
+
+    <div class="input-group mb-3">
+      <span class="input-group-text" id="basic-addon1" required>Image URL</span>
+      <input
+        type="text"
+        name="imageUrl"
+        class="form-control"
+        aria-label="Username"
+        ngModel
+        aria-describedby="basic-addon1"
+      />
+    </div>
+    <button type="submit" class="btn btn-secondary" [disabled]="false">
+      Submit
+    </button>
   </div>
-</section>
+</form>

@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { environment } from 'src/environments/environment';
 import { Medicine } from '../models/medicine.model';
 
+
 @Component({
   selector: 'app-inventory',
   templateUrl: './inventory.component.html',
@@ -18,6 +19,17 @@ export class InventoryComponent implements OnInit {
       .subscribe((res) => {
         console.log(res);
         this.medicines = res.medicines;
+      });
+  }
+
+  deleteClicked(id: string) {
+    console.log('dd', id);
+
+    this.http
+      .delete(environment.API_URL + '/medicine/' + id)
+      .subscribe((res) => {
+        console.log(res);
+        this.medicines = this.medicines.filter((m) => m._id !== id);
       });
   }
 }

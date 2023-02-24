@@ -13,6 +13,9 @@ const register = async (req, res) => {
       address,
       contactNo,
       licenseNo,
+      operatingHours,
+      website,
+      owner,
     });
     const token = await user.createToken();
     const resUser = {
@@ -22,6 +25,7 @@ const register = async (req, res) => {
       address: user.address,
       contactNo: user.contactNo,
       licenseNo: user.licenseNo,
+      owner: user.owner,
       token,
     };
     res.status(201).json({ user: resUser });

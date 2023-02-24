@@ -1,0 +1,110 @@
+<app-header></app-header>
+<form
+  action=""
+  class="text-center container"
+  #form="ngForm"
+  (submit)="onSubmit(form)"
+>
+  <fa-icon class="d-flex justify-content-end fs-5" role="button"></fa-icon>
+  <div class="py-2 px-4">
+    <h5 *ngIf="!editMode">Add Medicine</h5>
+    <h5 *ngIf="editMode">Update Medicine</h5>
+    <div class="alert alert-danger p-2 mt-3" role="alert" *ngIf="false">
+      fgfdg
+    </div>
+    <div class="text-center mt-4" *ngIf="false">
+      <div
+        class="spinner-border"
+        role="status"
+        style="width: 3rem; height: 3rem"
+      >
+        <span class="visually-hidden">Loading...</span>
+      </div>
+    </div>
+    <div class="input-group mb-3 mt-4">
+      <span class="input-group-text" id="basic-addon1">Name</span>
+      <input
+        type="text"
+        name="name"
+        class="form-control"
+        aria-label="Username"
+        [ngModel]="medicine?.name"
+        required
+        aria-describedby="basic-addon1"
+      />
+    </div>
+
+    <div class="input-group mb-3">
+      <span class="input-group-text" id="basic-addon1" required>Price</span>
+      <input
+        type="text"
+        name="price"
+        class="form-control"
+        aria-label="Username"
+        [ngModel]="medicine?.price"
+        aria-describedby="basic-addon1"
+      />
+    </div>
+
+    <div class="input-group mb-3">
+      <span class="input-group-text" id="basic-addon1" required
+        >Manufacturer</span
+      >
+      <input
+        type="text"
+        name="manufacturer"
+        class="form-control"
+        aria-label="Username"
+        [ngModel]="medicine?.manufacturer"
+        aria-describedby="basic-addon1"
+      />
+    </div>
+    <div class="input-group mb-3">
+      <span class="input-group-text" id="basic-addon1" required>Supplier</span>
+      <input
+        type="text"
+        name="supplier"
+        class="form-control"
+        aria-label="Username"
+        [ngModel]="medicine?.supplier"
+        aria-describedby="basic-addon1"
+      />
+    </div>
+    <div class="input-group mb-3">
+      <span class="input-group-text" id="basic-addon1" required>NDC</span>
+      <input
+        type="text"
+        name="ndc"
+        class="form-control"
+        aria-label="Username"
+        [ngModel]="medicine?.ndc"
+        aria-describedby="basic-addon1"
+      />
+    </div>
+    <div class="input-group mb-3">
+      <span class="input-group-text" id="basic-addon1" required
+        >Expire Date</span
+      >
+      <input
+        type="date"
+        name="expireDate"
+        class="form-control"
+        aria-label="Username"
+        [ngModel]="medicine?.expireDate"
+        aria-describedby="basic-addon1"
+      />
+    </div>
+    <div class="input-group mb-3">
+      <span class="input-group-text" id="basic-addon1" required>Quantity</span>
+      <input
+        type="text"
+        name="quantity"
+        class="form-control"
+        aria-label="Username"
+        [ngModel]="medicine?.quantity"
+        aria-describedby="basic-addon1"
+      />
+    </div>
+    <button type="submit" class="btn btn-secondary">Submit</button>
+  </div>
+</form>
