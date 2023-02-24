@@ -1,17 +1,27 @@
 import User from '../models/User.js';
 
 const register = async (req, res) => {
-  const { name, email, password } = req.body;
-  if (!name || !email || !password) {
+  const { name, email, password, address, contactNo, licenseNo } = req.body;
+  if (!name || !email || !password || !address || !contactNo || !licenseNo) {
     return res.status(400).json({ message: 'Please enter all fields' });
   }
   try {
-    const user = await User.create({ name, email, password });
+    const user = await User.create({
+      name,
+      email,
+      password,
+      address,
+      contactNo,
+      licenseNo,
+    });
     const token = await user.createToken();
     const resUser = {
       _id: user._id,
       name: user.name,
       email: user.email,
+      address: user.address,
+      contactNo: user.contactNo,
+      licenseNo: user.licenseNo,
       token,
     };
     res.status(201).json({ user: resUser });
