@@ -52,12 +52,12 @@
       />
     </div>
     <div class="input-group mb-3">
-      <span class="input-group-text" id="nic">NIC</span>
+      <span class="input-group-text" id="address">Address</span>
       <input
-        id="nic"
-        type="nic"
+        id="address"
+        type="address"
         class="form-control"
-        name="nic"
+        name="address"
         ngModel
         nic
         required
@@ -71,7 +71,7 @@
         name="phoneNo"
         ngModel
         aria-label="Username"
-        aria-describedby="dob"
+        aria-describedby="basic-addon1"
       />
     </div>
 
@@ -110,6 +110,20 @@
         id="password"
         type="password"
         name="password"
+        ngModel
+        class="form-control"
+        aria-label="Username"
+        aria-describedby="basic-addon1"
+        required
+        minlength="6"
+      />
+    </div>
+    <div class="input-group mb-3">
+      <span class="input-group-text" id="license">License Number</span>
+      <input
+        id="license"
+        type="license"
+        name="license"
         ngModel
         class="form-control"
         aria-label="Username"
