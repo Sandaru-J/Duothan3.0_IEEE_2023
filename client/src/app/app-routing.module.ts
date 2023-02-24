@@ -31,6 +31,10 @@ const routes: Routes = [
     path: 'manage-medicine',
     component: AddMedicineComponent,
   },
+  {
+    path: 'manage-medicine/:id',
+    component: AddMedicineComponent,
+  },
 ];
 
 @NgModule({

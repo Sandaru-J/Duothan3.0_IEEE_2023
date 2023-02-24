@@ -1,5 +1,10 @@
 <app-header></app-header>
-<form action="" class="text-center container" #form="ngForm">
+<form
+  action=""
+  class="text-center container"
+  #form="ngForm"
+  (submit)="onSubmit(form)"
+>
   <fa-icon class="d-flex justify-content-end fs-5" role="button"></fa-icon>
   <div class="py-2 px-4">
     <h5>Add Product</h5>
@@ -20,7 +25,7 @@
         name="name"
         class="form-control"
         aria-label="Username"
-        ngModel
+        [ngModel]="medicine?.name"
         required
         aria-describedby="basic-addon1"
       />
@@ -33,7 +38,7 @@
         name="price"
         class="form-control"
         aria-label="Username"
-        ngModel
+        [ngModel]="medicine?.price"
         aria-describedby="basic-addon1"
       />
     </div>
@@ -47,7 +52,7 @@
         name="manufacturer"
         class="form-control"
         aria-label="Username"
-        ngModel
+        [ngModel]="medicine?.manufacturer"
         aria-describedby="basic-addon1"
       />
     </div>
@@ -58,7 +63,7 @@
         name="supplier"
         class="form-control"
         aria-label="Username"
-        ngModel
+        [ngModel]="medicine?.supplier"
         aria-describedby="basic-addon1"
       />
     </div>
@@ -69,7 +74,7 @@
         name="ndc"
         class="form-control"
         aria-label="Username"
-        ngModel
+        [ngModel]="medicine?.ndc"
         aria-describedby="basic-addon1"
       />
     </div>
@@ -82,7 +87,7 @@
         name="expireDate"
         class="form-control"
         aria-label="Username"
-        ngModel
+        [ngModel]="medicine?.expireDate"
         aria-describedby="basic-addon1"
       />
     </div>
@@ -93,7 +98,7 @@
         name="quantity"
         class="form-control"
         aria-label="Username"
-        ngModel
+        [ngModel]="medicine?.quantity"
         aria-describedby="basic-addon1"
       />
     </div>

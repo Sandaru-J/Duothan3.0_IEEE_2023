@@ -1,20 +1,11 @@
 import Medicine from '../models/Medicine.js';
 
 const createMedicine = async (req, res) => {
-  const {
-    name,
-    description,
-    price,
-    quantity,
-    ndc,
-    supplier,
-    expireDate,
-    manufacturer,
-  } = req.body;
+  const { name, price, quantity, ndc, supplier, expireDate, manufacturer } =
+    req.body;
   try {
     if (
       !name ||
-      !description ||
       !price ||
       !quantity ||
       !ndc ||
@@ -25,7 +16,6 @@ const createMedicine = async (req, res) => {
       return res.status(400).json({ message: 'Please fill all the fields' });
     const medicine = new Medicine({
       name,
-      description,
       price,
       quantity,
       pharmacyId: '63f6447282cfa72aeb467e20',

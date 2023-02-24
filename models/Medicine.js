@@ -9,10 +9,6 @@ const MedicineSchema = new mongoose.Schema({
     type: Number,
     required: true,
   },
-  description: {
-    type: String,
-    required: true,
-  },
   ndc: {
     type: String,
     required: true,
@@ -32,6 +28,10 @@ const MedicineSchema = new mongoose.Schema({
   pharmacyId: {
     type: mongoose.Schema.Types.ObjectId,
     ref: 'Pharmacy',
+    required: true,
+  },
+  price: {
+    type: Number,
     required: true,
   },
 });
