@@ -10,9 +10,10 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { FormsModule } from '@angular/forms';
 import { HomeComponent } from './home/home.component';
+import { HeaderComponent } from './header/header.component';
 
 @NgModule({
-  declarations: [AppComponent, PayhereComponent, AuthComponent, HomeComponent],
+  declarations: [AppComponent, PayhereComponent, AuthComponent, HomeComponent, HeaderComponent],
   imports: [
     BrowserModule,
     NgbModule,
