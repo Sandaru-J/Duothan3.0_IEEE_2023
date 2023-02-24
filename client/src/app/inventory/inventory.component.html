@@ -1,6 +1,7 @@
 <app-header></app-header>
 <div class="d-flex gap-2 container flex-wrap">
   <app-medicine
+    (onDeleteClicked)="deleteClicked($event)"
     *ngFor="let medicine of medicines"
     [medicine]="medicine"
   ></app-medicine>
