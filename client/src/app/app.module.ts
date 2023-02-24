@@ -24,6 +24,7 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PhamarcyCrdComponent } from './Phamarcy/phamarcy-crd/phamarcy-crd.component';
 import { PhamarcyViewComponent } from './Phamarcy/phamarcy-view/phamarcy-view.component';
+import { CoverComponent } from './Cover/cover/cover.component';
 @NgModule({
 
   declarations: [
@@ -40,7 +41,8 @@ import { PhamarcyViewComponent } from './Phamarcy/phamarcy-view/phamarcy-view.co
     AddMedicineComponent,
     PhamarcyCrdComponent,
     PhamarcyViewComponent,
-    AdminDashboardComponent
+    AdminDashboardComponent,
+    CoverComponent
   ],
 
   imports: [
