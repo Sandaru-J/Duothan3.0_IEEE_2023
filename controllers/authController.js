@@ -84,4 +84,48 @@ const login = async (req, res) => {
   }
 };
 
-export { register, login };
+const getUser = async (req, res) => {
+  try {
+    const user = await User.findById(req.user._id);
+    if (!user) {
+      return res.status(400).json({ message: 'User does not exist' });
+    }
+    const resUser = {
+      _id: user._id,
+      name: user.name,
+      email: user.email,
+      address: user.address,
+      contactNo: user.contactNo,
+      licenseNo: user.licenseNo,
+      owner: user.owner,
+    };
+    res.status(200).json({ user: resUser });
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
+};
+
+const getUsers = async (req, res) => {
+  try {
+    const users = await User.find();
+    if (!users) {
+      return res.status(400).json({ message: 'Users do not exist' });
+    }
+    const resUsers = users.map((user) => {
+      return {
+        _id: user._id,
+        name: user.name,
+        email: user.email,
+        address: user.address,
+        contactNo: user.contactNo,
+        licenseNo: user.licenseNo,
+        owner: user.owner,
+      };
+    });
+    res.status(200).json({ users: resUsers });
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
+};
+
+export { register, login, getUser, getUsers };

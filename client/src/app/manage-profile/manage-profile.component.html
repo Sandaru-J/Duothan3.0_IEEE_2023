@@ -58,3 +58,184 @@
     </button>
   </div>
 </form>
+<form action="" class="text-center" #form="ngForm">
+  <!-- <fa-icon
+    [icon]="faClose"
+    class="d-flex justify-content-end fs-5"
+    role="button"
+  ></fa-icon> -->
+  <div class="py-2 px-4">
+    <h5>Add Product</h5>
+    <div class="alert alert-danger p-2 mt-3" role="alert" *ngIf="true">
+      sdgdsg
+    </div>
+    <div class="text-center mt-4" *ngIf="false">
+      <div
+        class="spinner-border"
+        role="status"
+        style="width: 3rem; height: 3rem"
+      >
+        <span class="visually-hidden">Loading...</span>
+      </div>
+    </div>
+    <div class="input-group mb-3 mt-4">
+      <span class="input-group-text" id="basic-addon1">Name</span>
+      <input
+        type="text"
+        name="name"
+        class="form-control"
+        aria-label="Username"
+        ngModel
+        required
+        aria-describedby="basic-addon1"
+      />
+    </div>
+    <div class="input-group mb-3">
+      <span class="input-group-text" id="basic-addon1" required>Price</span>
+      <input
+        type="text"
+        name="price"
+        class="form-control"
+        aria-label="Username"
+        ngModel
+        aria-describedby="basic-addon1"
+      />
+    </div>
+
+    <div class="col-md-6" id="right">
+      <i class="fa-solid fa-user-unlock" id="user-login-icon"></i>
+      <h1 class="font-weight-bold">MediSearch</h1>
+      <h3>Manage Profile</h3>
+      <br />
+
+      <form>
+        <div class="form-row">
+          <h5>Pharmacy Information</h5>
+        </div>
+        <div class="form-row">
+          <div class="col-6">
+            <input
+              type="text"
+              placeholder="Pharamacy Name"
+              class="form-control my-3 p-4"
+            />
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="col-6">
+            <input
+              type="text"
+              placeholder="Address"
+              class="form-control my-3 p-4"
+            />
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="col-6">
+            <input
+              type="text"
+              placeholder="Phone Number"
+              class="form-control my-3 p-4"
+            />
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="col-6">
+            <input
+              type="email"
+              placeholder="Email"
+              class="form-control my-3 p-4"
+            />
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="col-6">
+            <input
+              type="text"
+              placeholder="Website"
+              class="form-control my-3 p-4"
+            />
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="col-6">
+            <input
+              type="text"
+              placeholder="Operating Hours"
+              class="form-control my-3 p-4"
+            />
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="col-6">
+            <input
+              type="text"
+              placeholder="Pharmacy License"
+              class="form-control my-3 p-4"
+            />
+          </div>
+        </div>
+
+        <br /><br />
+
+        <div class="form-row">
+          <h5>Pharmacy Information</h5>
+        </div>
+        <div class="form-row">
+          <div class="col-6">
+            <input
+              type="text"
+              placeholder="Name"
+              class="form-control my-3 p-4"
+            />
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="col-6">
+            <input
+              type="text"
+              placeholder="Address"
+              class="form-control my-3 p-4"
+            />
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="col-6">
+            <input
+              type="text"
+              placeholder="Owner Phone Number"
+              class="form-control my-3 p-4"
+            />
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="col-6">
+            <input
+              type="email"
+              placeholder="Owner Email"
+              class="form-control my-3 p-4"
+            />
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="col-6">
+            <input
+              type="text"
+              placeholder="Owner NIC"
+              class="form-control my-3 p-4"
+            />
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="col-6">
+            <button type="button" class="btnsave mt-3 mb-5">Save</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+  <button type="submit" class="btn btn-secondary" [disabled]="false">
+    Submit
+  </button>
+</form>
