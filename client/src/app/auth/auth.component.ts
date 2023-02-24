@@ -13,6 +13,7 @@ export class AuthComponent implements OnInit {
   loginPage = true;
   isLoading = false;
   showError = false;
+  isPharmacy = false;
   errorMessage = '';
 
   constructor(
@@ -90,5 +91,9 @@ export class AuthComponent implements OnInit {
       this.showError = false;
       this.errorMessage = '';
     }, 3000);
+  }
+
+  onSwitch() {
+    this.isPharmacy = !this.isPharmacy;
   }
 }

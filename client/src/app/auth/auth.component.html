@@ -1,9 +1,23 @@
 <h3 class="m-4 fw-bold" [routerLink]="['/']" role="button">Duothan 3.0 IEEE</h3>
 
 <div class="container mx-auto text-center">
-  <h3 class="fw-bold">Hello</h3>
+  <h3 class="fw-bold">Hello {{ isPharmacy ? "Pharmacist!" : "User!" }}</h3>
+
   <p class="fw-semibold" *ngIf="!loginPage">
-    Create an account or <a [routerLink]="['/login']">login</a> to the system
+    Create an account or <a [routerLink]="['/login']">login</a> to the system<br />
+
+    <!-- <button *ngIf="isPharmacy && loginPage" (click)="onSwitch()">
+      Login as a User
+    </button>
+    <button *ngIf="!isPharmacy && loginPage" (click)="onSwitch()">
+      Login as a Pharmacist
+    </button> -->
+    <button *ngIf="isPharmacy && !loginPage" (click)="onSwitch()">
+      Register as a User
+    </button>
+    <button *ngIf="!isPharmacy && !loginPage" (click)="onSwitch()">
+      Register as a Pharmacist
+    </button>
   </p>
   <p class="fw-semibold" *ngIf="loginPage">
     Login or <a [routerLink]="['/register']">create an account</a> to the system
@@ -49,7 +63,7 @@
         required
       />
     </div>
-    <div class="input-group mb-3" *ngIf="!loginPage">
+    <div class="input-group mb-3" *ngIf="!loginPage && !isPharmacy">
       <span class="input-group-text" id="dob">Birth Date</span>
       <input
         type="number"
@@ -76,7 +90,7 @@
       />
     </div>
 
-    <div class="input-group mb-3" *ngIf="!loginPage">
+    <div class="input-group mb-3">
       <span class="input-group-text" id="email">Email</span>
       <input
         id="email"
