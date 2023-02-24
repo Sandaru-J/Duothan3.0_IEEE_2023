@@ -1,0 +1,84 @@
+<h3 class="m-4 fw-bold" [routerLink]="['/']" role="button">Duothan 3.0 IEEE</h3>
+
+<div class="container mx-auto text-center">
+  <h3 class="fw-bold">Hello</h3>
+  <p class="fw-semibold" *ngIf="!loginPage">
+    Create an account or <a [routerLink]="['/login']">login</a> to the system
+  </p>
+  <p class="fw-semibold" *ngIf="loginPage">
+    Login or <a [routerLink]="['/register']">create an account</a> to the system
+  </p>
+  <form
+    action=""
+    class="container p-5 border border-1 rounded"
+    style="max-width: 450px; background-color: #f9f9f9"
+    #authForm="ngForm"
+    (submit)="onSubmit(authForm)"
+  >
+    <div class="alert alert-danger py-2" role="alert" *ngIf="showError">
+      {{ errorMessage }}
+    </div>
+    <div
+      *ngIf="isLoading"
+      class="spinner-border mb-4"
+      style="width: 3rem; height: 3rem"
+      role="status"
+    >
+      <span class="visually-hidden">Loading...</span>
+    </div>
+    <div class="input-group mb-3" *ngIf="!loginPage">
+      <span class="input-group-text" id="name">Name</span>
+      <input
+        type="text"
+        id="name"
+        class="form-control"
+        name="name"
+        ngModel
+        required
+      />
+    </div>
+    <div class="input-group mb-3">
+      <span class="input-group-text" id="email">Email</span>
+      <input
+        id="email"
+        type="email"
+        class="form-control"
+        name="email"
+        ngModel
+        email
+        required
+      />
+    </div>
+    <!-- <div class="input-group mb-3" *ngIf="!loginPage">
+      <span class="input-group-text" id="basic-addon1">Phone No</span>
+      <input
+        type="number"
+        class="form-control"
+        name="phoneNo"
+        ngModel
+        aria-label="Username"
+        aria-describedby="basic-addon1"
+      />
+    </div> -->
+    <div class="input-group mb-3">
+      <span class="input-group-text" id="password">Password</span>
+      <input
+        id="password"
+        type="password"
+        name="password"
+        ngModel
+        class="form-control"
+        aria-label="Username"
+        aria-describedby="basic-addon1"
+        required
+        minlength="6"
+      />
+    </div>
+    <button
+      class="btn btn-primary btn-default text-white"
+      [disabled]="isLoading"
+    >
+      Submit
+    </button>
+  </form>
+</div>
