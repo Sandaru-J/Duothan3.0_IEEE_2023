@@ -1,8 +1,21 @@
+
 <app-header></app-header>
 <div class="d-flex gap-2 container flex-wrap">
+
   <app-medicine
     (onDeleteClicked)="deleteClicked($event)"
     *ngFor="let medicine of medicines"
     [medicine]="medicine"
   ></app-medicine>
+
+<div class="input-group mb-3" id="search">
+  <span class="input-group-text" id="name">Search</span>
+  <input
+    type="text"
+    id="name"
+    class="form-control"
+    name="name"
+    ngModel
+    required
+  />
 </div>

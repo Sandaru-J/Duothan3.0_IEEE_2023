@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { environment } from 'src/environments/environment';
 import { Medicine } from '../models/medicine.model';
 
+
 @Component({
   selector: 'app-inventory',
   templateUrl: './inventory.component.html',
