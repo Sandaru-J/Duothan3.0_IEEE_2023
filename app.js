@@ -1,5 +1,4 @@
 import express from 'express';
-import paymentRoutes from './routes/paymentRoutes.js';
 import dotenv from 'dotenv';
 import cors from 'cors';
 import http from 'http';
@@ -7,7 +6,9 @@ import { Server } from 'socket.io';
 import sendMail from './utils/email/sendEmail.js';
 import sendSMS from './utils/sms/sendSMS.js';
 import connect from './db/connect.js';
-import Test from './models/Test.js';
+
+import paymentRoutes from './routes/paymentRoutes.js';
+import authRoutes from './routes/authRoutes.js';
 
 const app = express();
 dotenv.config();
@@ -32,6 +33,7 @@ app.get('/api', (req, res) => {
 });
 
 app.use('/api/payment', paymentRoutes);
+app.use('/api/auth', authRoutes);
 
 //Email
 
