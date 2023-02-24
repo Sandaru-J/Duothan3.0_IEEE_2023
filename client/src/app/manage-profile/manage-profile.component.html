@@ -42,16 +42,96 @@
       />
     </div>
 
-    <div class="input-group mb-3">
-      <span class="input-group-text" id="basic-addon1" required>Image URL</span>
-      <input
-        type="text"
-        name="imageUrl"
-        class="form-control"
-        aria-label="Username"
-        ngModel
-        aria-describedby="basic-addon1"
-      />
+
+
+      <div class="col-md-6" id="right">
+        <i class="fa-solid fa-user-unlock" id="user-login-icon"></i>
+        <h1 class="font-weight-bold">MediSearch</h1>
+        <h3>Manage Profile</h3>
+        <br>
+
+      <form >
+        <div class="form-row">
+          <h5>Pharmacy Information</h5>
+        </div>
+        <div class="form-row">
+          <div class="col-6">
+            <input type="text" placeholder="Pharamacy Name" class="form-control my-3 p-4">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="col-6">
+            <input type="text" placeholder="Address" class="form-control my-3 p-4">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="col-6">
+            <input type="text" placeholder="Phone Number" class="form-control my-3 p-4">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="col-6">
+            <input type="email" placeholder="Email" class="form-control my-3 p-4">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="col-6">
+            <input type="text" placeholder="Website" class="form-control my-3 p-4">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="col-6">
+            <input type="text" placeholder="Operating Hours" class="form-control my-3 p-4">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="col-6">
+            <input type="text" placeholder="Pharmacy License" class="form-control my-3 p-4">
+          </div>
+        </div>
+
+        <br><br>
+
+        <div class="form-row">
+          <h5>Pharmacy Information</h5>
+        </div>
+        <div class="form-row">
+          <div class="col-6">
+            <input type="text" placeholder="Name" class="form-control my-3 p-4">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="col-6">
+            <input type="text" placeholder="Address" class="form-control my-3 p-4">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="col-6">
+            <input type="text" placeholder="Owner Phone Number" class="form-control my-3 p-4">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="col-6">
+            <input type="email" placeholder="Owner Email" class="form-control my-3 p-4">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="col-6">
+            <input type="text" placeholder="Owner NIC" class="form-control my-3 p-4">
+          </div>
+        </div>
+
+
+        <div class="form-row">
+          <div class="col-6">
+            <button type="button" class="btnsave mt-3 mb-5">Save</button>
+          </div>
+        </div>
+
+      </form>
+
+</div>
+
     </div>
     <button type="submit" class="btn btn-secondary" [disabled]="false">
       Submit
